@@ -1,0 +1,102 @@
+h1{
+    &.entry-title{
+        font-size: 50px;
+        font-weight: 700;
+    }
+}
+
+
+.page-header-area{
+    .site-featured-image{
+        .post-thumbnail{
+            img{
+                width: 100%;
+                height: 400px;
+            }
+        }
+    }
+}
+
+header{
+    &#from-page-template{
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        padding: 160px 0 80px 0;
+        color: #fff;
+        text-align: center;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Optional: darken the background image for better text visibility */
+            z-index: 0;
+        }
+        .overlay{
+            position: relative;
+            z-index: 1;
+        }
+        .entry-title{
+            position: relative;
+            z-index: 2;
+            //font-size: 2em;
+            margin: 0;
+        }
+    }
+}
+
+
+.page-header-area {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0; /* Adjust as needed */
+    color: #fff; /* Ensure the text color contrasts well with the background image */
+    text-align: center; /* Center align the text */
+    min-height: 400px;
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+        z-index: 1;
+    }
+    .container{
+        position: relative;
+        z-index: 2;
+        padding-top: 150px;
+        text-align: left;
+    }
+    .page-title{
+        font-size: 3rem; /* Adjust font size as needed */
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* CSS for Parallax Effect */
+// .parallax-bg {
+//     background-attachment: fixed;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     //height: 100vh; /* Adjust as needed */
+//     position: relative;
+//     overflow: hidden;
+// }
+
+// .default-bg {
+//     /* Fallback styles for default image */
+//     background-attachment: fixed;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     height: 100vh; /* Adjust as needed */
+//     position: relative;
+//     overflow: hidden;
+// }

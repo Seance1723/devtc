@@ -1,0 +1,17 @@
+.contact-sec{
+    .contact-left{
+
+    }
+}
+
+//Responsive
+@media (min-width: 768px) {
+    body{
+        //contact section
+        .contact-sec{
+            .contact-left{
+                padding-right: 4rem !important;
+            }
+        }
+    }
+}

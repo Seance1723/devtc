@@ -63,46 +63,86 @@ $image_url = get_template_directory_uri() . '/assets/images/map.png';
 						</div>
 						<div class="col-auto"></div>
 					</div><!-- .footer-links -->
-					<div class="footer-bottom">
-						<div class="row justify-content-between align-items-center">
+				</div><!-- .container -->
+				<div class="footer-bottom">
+					<div class="container">
+						<div class="row justify-content-between align-items-center footer-bottom-inner">
 							<div class="col-auto">
 								<div class="copyright">
-									<p class="text-center text-white m-0">©2025 <a href="https://thoucentric.com">Thoucentric</a>, All Rights Reserved.</p>
+									<p class="text-center m-0">©2025 <a href="https://thoucentric.com">Thoucentric</a>, All Rights Reserved.</p>
 								</div>
 							</div>
 							<div class="col-auto">
 								<div class="footer-social">
 									<ul class="social-icons">
-										<li><a href="#"><i class="bi bi-facebook"></i></a></li>
-										<li><a href="#"><i class="bi bi-twitter"></i></a></li>
-										<li><a href="#"><i class="bi bi-instagram"></i></a></li>
-										<li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+										<li>
+											<a href="#">
+												<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" /></svg>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg>
+											</a>
+										</li>
 									</ul>
 								</div>
 							</div>
 							<div class="col-auto">
 								<div class="footer-menu">
 									<?php
-									wp_nav_menu(
-										array(
-											'theme_location' => 'footer',
-											'menu_id'        => 'footer-menu',
-											'container'      => false,
-											'depth'          => 1,
-										)
-									);
+										wp_nav_menu(
+											array(
+												'theme_location' => 'footer',
+												'menu_id'        => 'footer-menu',
+												'container'      => false,
+												'depth'          => 1,
+											)
+										);
 									?>
 								</div>
 							</div>
+						</div><!-- .footer-bottom-inner -->
+					</div>
+				</div><!-- .footer-bottom -->
+
+				<!-- <div class="totop d-none">
+					<a href="#">
+						<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M16 9l-4 -4" /><path d="M8 9l4 -4" /></svg>
+					</a>
+				</div> -->
+				<div class="totop">
+					<a href="#">
+						<div class="progress-ring">
+							<svg width="48" height="48" viewBox="0 0 48 48">
+								<circle class="background-ring" cx="24" cy="24" r="22" fill="none" stroke-width="4" />
+								<circle class="progress-ring-path" cx="24" cy="24" r="22" fill="none" stroke-width="4" />
+							</svg>
+							<span class="arrow">&#8593;</span>
 						</div>
-					</div><!-- .footer-bottom -->
-				</div>
-			</footer>
+					</a>
+				</div><!-- .totop -->
 
-			<div class="totop">
-				<a href="#"><i class="bi bi-chevron-up"></i></a>
-			</div>
+				<div class="scrolling-text-container">
+					<div class="scrolling-text">
+						<span>thoucentric</span>
+						<span>thoucentric</span>
+						<span>thoucentric</span>
+						<span>thoucentric</span>
+					</div>
+				</div><!-- .scrolling-text-container -->
 
+			</footer><!-- .footer -->
 		</div><!-- #page -->
 
 		<?php wp_footer(); ?>

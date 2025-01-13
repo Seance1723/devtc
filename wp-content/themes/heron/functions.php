@@ -87,6 +87,17 @@ if ( ! function_exists( 'phoenix_setup' ) ) :
     }
 endif;
 add_action( 'after_setup_theme', 'phoenix_setup' );
+/**
+ * Disable the block editor for widgets
+ * 
+ * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#disabling-block-editor-for-widgets
+ */
+function phoenix_use_classic_widgets() {
+    // Disable the block editor for widgets
+    remove_theme_support('widgets-block-editor');
+}
+add_action('after_setup_theme', 'phoenix_use_classic_widgets');
+
 
 /**
  * Register widget area.
@@ -94,9 +105,10 @@ add_action( 'after_setup_theme', 'phoenix_setup' );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function phoenix_widgets_init() {
+    // Register existing footer widget area
     register_sidebar(
         array(
-            'name'          => __( 'Footer', 'phoenix' ),
+            'name'          => __( 'Sidebar', 'phoenix' ),
             'id'            => 'sidebar-1',
             'description'   => __( 'Add widgets here to appear in your footer.', 'phoenix' ),
             'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -105,8 +117,22 @@ function phoenix_widgets_init() {
             'after_title'   => '</h2>',
         )
     );
+
+    // Register 4 dynamic footer widget areas
+    for ($i = 1; $i <= 4; $i++) {
+        register_sidebar(array(
+            'name'          => __('Footer Link Area ' . $i, 'phoenix'),
+            'id'            => 'footer-widget-' . $i,
+            'description'   => __('Add Link here for Footer Widget Area ' . $i, 'phoenix'),
+            'before_widget' => '<div id="%1$s" class="footer-widget widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h4 class="widget-title">',
+            'after_title'   => '</h4>',
+        ));
+    }
 }
-add_action( 'widgets_init', 'phoenix_widgets_init' );
+add_action('widgets_init', 'phoenix_widgets_init');
+
 
 class Custom_Heading_Widget extends WP_Widget {
     function __construct() {

@@ -5,12 +5,8 @@
     font-size: 1rem;
     font-weight: 400;
     line-height: 34px;
-    color: var(--dark-color);
-    background-color: var(--primary-dark-color);
-    background-position: center;
-    background-size: cover !important;
-    background-repeat: no-repeat;
     overflow: hidden;
+    background: var(--dark-mid-color);
     &::before{
         content: '';
         position: absolute;
@@ -22,203 +18,71 @@
     }
     .footer-inner{
         position: relative;
-        padding: 60px 0px 30px 0px;
+        padding-top: 3.75rem;
         overflow: hidden;
-    }
-    .footer-link{
-        position: relative;
-        ul{
-            padding: 0;
-            margin: 0;
-            text-align: center;
-            li{
-                display: inline-block;
-                a{
-                    font-size: 14px;
-                    color: var(--white-color);
-                    text-decoration: none;
-                    display: inline-block;
+        .footer-logo{
+            a{
+                img{
+                    width: 154px;
+                    height: auto;
                 }
             }
         }
+        .top-info{
+            font-size: 0.875rem;
+            font-weight: 500;
+            line-height: 1.125rem;
+        }
     }
-    ul{
-        padding: 0;
-        margin-bottom: 0px;
-        list-style-type: none;
-        li{
-            list-style-type: none;
-            padding-bottom: 1.375rem;
+    .footer-cta{
+        padding-top: 3.75rem;
+        .intro-text{
+            color: var(--white-color);
+            text-transform: uppercase;
+            h2{
+                margin: 0;
+                font-size: 2.375rem;
+                line-height: 3.75rem;
+                font-weight: 800;
+                .text-line{
+                    -webkit-text-stroke-width: 1px;
+                    -webkit-text-stroke-color: var(--primary-color);
+                    color: transparent;
+                }
+            }
+        }
+        .cta-button{
             a{
-                color: var(--white-color);
-                font-size: 2.75rem;
 
-            }
-            &:last-child{
-                padding-bottom: 0px;
             }
         }
     }
-    .logo{
-        img{
-            width: 320px;
-            height: auto;
+    .footer-links{
+        padding-top: 2.5rem;
+        .footer-widget-area{
+           .widget-title{
+            font-size: 1.25rem;
+            color: var(--white-color);
+            font-weight: 400;
+           }
+           nav{
+            ul{
+                padding: 0;
+                margin: 0;
+                li{
+                    padding-bottom: 2px;
+                    a{
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: rgba(var(--light), .5);
+                        &:hover{
+                            color: var(--primary-color);
+                            padding-left: 12px;
+                        }
+                    }
+                }
+            }
+           }
         }
-    }
-}
-
-
-
-/* Style 2 */
-.footer.style2 ul li a {
-    color: var(--color-white);
-}
-.footer.style2 ul li a:hover {
-    color: var(--color-one);
-}
-.footer.style2 .widget-title {
-    color: var(--color-white);
-}
-
-/* Totop */
-.totop {
-    position: fixed;
-    right: 30px;
-    bottom: 22px;
-    z-index: 3;
-    opacity: 0;
-    visibility: hidden;
-    transition: var(--transition-base);
-}
-.totop.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-.totop a {
-    width: 54px;
-    height: 54px;
-    background: var(--color-one);
-    color: var(--color-white-fixed);
-    display: inline-block;
-    text-align: center;
-    line-height: 54px;
-    border-radius: 4px;
-    box-shadow: 0px 0px 3px var(--color-one);
-}
-
-.wptb-newsletter-box {
-    position: relative;
-    padding: 40px;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.wptb-newsletter-box::before,
-.wptb-newsletter-box::after,
-.wptb-newsletter-box .wptb-newsletter-box--inner::before,
-.wptb-newsletter-box .wptb-newsletter-box--inner::after {
-    content: '';
-    position: absolute;
-    width: 63px;
-    height: 63px;
-    border-style: solid;
-    border-color: var(--color-dark-seven-fixed);
-    transition: var(--transition-base);
-}
-
-.wptb-newsletter-box::before {
-    left: 0;
-    top: 0;
-    border-width: 1px 0px 0px 1px;
-}
-
-.wptb-newsletter-box::after {
-    right: 0;
-    bottom: 0;
-    border-width: 0px 1px 1px 0px;
-}
-
-.wptb-newsletter-box .wptb-newsletter-box--inner::before {
-    left: 0;
-    bottom: 0;
-    border-width: 0px 0px 1px 1px;
-}
-
-.wptb-newsletter-box .wptb-newsletter-box--inner::after {
-    top: 0;
-    right: 0;
-    border-width: 1px 1px 0px 0px;
-}
-
-.footer-widget-with-border {
-    position: relative;
-}
-.footer-widget-with-border::before,
-.footer-widget-with-border::after {
-    content: '';
-    position: absolute;
-    top: -62%;
-    width: 1px;
-    height: 200%;
-    background-color: rgba(var(--color-white-fixed-rgb), 0.1)
-}
-
-.footer-widget-with-border::before {
-    left: 0;
-}
-.footer-widget-with-border::after {
-    right: 0;
-}
-
-.footer .social-box.style-oval ul li a:not(:hover) {
-    border-color: var(--color-white-fixed);
-    color: var(--color-white-fixed);
-}
-
-
-@media screen and (max-width: 1199.9px) {
-    .footer-upper-contact .logo {
-        position: relative;
-        left: 0;
-        margin-bottom: 15px;
-    }
-    .footer-upper-contact .logo a {
-        padding: 10px;
-    }
-    .footer .widget-title {
-        font-size: 15px;
-        line-height: 22px;
-    }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199.9px) {
-    .footer .widget-title br {
-        display: none;
-    }
-    .footer .newsletter-form button.btn {
-        position: relative;
-        background-color: var(--color-dark-seven-fixed);
-        margin-top: 8px;
-    }
-    .wptb-newsletter-box {
-        padding: 10px;
-    }
-}
-
-@media screen and (max-width: 767.9px) {
-    .footer-widget-with-border::before, .footer-widget-with-border::after {
-        display: none;
-    }
-}
-@media screen and (max-width: 575.9px) {
-    .footer-upper-contact .wptb-icon-box1 .wptb-item--inner {
-        border-width: 0px;
-        margin-right: 0px;
-    }
-    .footer .newsletter-form button.btn {
-        position: relative;
-        background-color: var(--color-dark-seven-fixed);
-        margin-top: 8px;
     }
 }

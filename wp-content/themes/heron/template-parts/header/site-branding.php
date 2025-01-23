@@ -44,12 +44,11 @@
                     'fallback_cb'    => false,
                 ) );
                 ?>
-                <span class="cta-explore"><i class="bi bi-arrow-up-right"></i><a href="http://thoucentric.com">Explore More</a></span>
             </div>
         </div>
 
         <!-- Right Part -->
-        <!-- <div class="header_right_part d-flex align-items-center">
+        <div class="header_right_part d-flex align-items-center">
             <div class="aside_open wptb-element">
                 <div class="aside-open--inner">
                     <span></span>
@@ -67,6 +66,7 @@
             <button type="button" class="mr_menu_toggle wptb-element d-xl-none">
                 <i class="bi bi-list"></i>
             </button>
-        </div> -->
+        </div>
+        
     </div>
 </div>

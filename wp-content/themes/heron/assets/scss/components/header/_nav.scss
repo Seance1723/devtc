@@ -1,17 +1,75 @@
-header{
-  &#site-nav{
-    background: rgba(var(--dark), .5);
-    .header-inner{
-      .mainnav{
-        color: var(--dark-color);
+header.header {
+  display: flex;                        // Use flexbox for the header layout
+  align-items: center;                  // Align items vertically
+  justify-content: space-between;       // Space between left, center, and right parts
+  background: rgba(var(--dark), 0.5);   // Optional: background color
+  height: 70px;
+
+  .header-inner {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+
+  .header_left_part {
+    display: flex;                      // Ensure logo stays on the left
+    align-items: center;
+
+    .logo {
+      a {
+        display: block;                 // Ensure logo is block-level
+        max-width: 150px;               // Adjust the size as needed
+
+        img {
+          width: 80%;                   // Ensure image is responsive
+          height: auto;
+          margin-left: 100px;
+        }
       }
     }
   }
-}
 
-header#site-nav{
+  .header_center_part {
+    display: flex;                      // Use flexbox for the center menu
+    justify-content: center;            // Center the menu horizontally
+    align-items: center;                // Align menu items vertically
+    flex-grow: 1;                       // Allow it to take remaining space
+    position: absolute;                 // Position it relative to the header
+    left: 50%;                          // Center horizontally
+    transform: translateX(-50%);        // Offset by 50% of its width for true centering
 
+    ul {
+      list-style: none;                 // Remove bullet points
+      display: flex;                    // Use flexbox for menu items
+      gap: 20px;                        // Add space between menu items
+      padding: 0;                       // Remove default padding
+      margin: 0;                        // Remove default margin
 
+      li {
+        display: inline-block;          // Ensure each menu item is inline
 
+        a {
+          text-decoration: none;        // Remove underline from links
+          color: #fff;                  // Set link color
+          padding: 10px 15px;           // Add spacing for better usability
+          border-radius: 5px;           // Optional: add rounded corners
+          position: relative;           // Position relative for hover effect
+          transition: all 0.3s ease;    // Smooth transition for all properties
+
+          // Add hover effect with underline
+          &:hover {
+            text-decoration: underline; // Add underline
+            text-underline-offset: 3px; // Add gap between text and underline
+            background: rgba(255, 255, 255, 0.1); // Optional: hover background effect
+          }
+        }
+
+        // Remove submenu-related styles
+        ul {
+          display: none;               // Hide any nested submenu
+        }
+      }
+    }
+  }
 
 }

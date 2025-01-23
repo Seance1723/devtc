@@ -7,99 +7,34 @@
 
 @import "./mixins";
 
-$default-font-family: Inter, serif;
+$default-font-family: Plus Jakarta Sans, sans-serif;
 
 // Variables
 $baseFontSize: 16px; // default base font size
 $minViewportSize: 360; // minimum viewport size
 $maxViewportSize: 2560; // maximum viewport size
 
-// Flexible Colors Palette
+//Colors
 $colors: (
-  // Primary Colors
-  primary: #F16539,
-  primary-light: #FDEAE4,
-  primary-dark: #C6522E,
-  primary-hover: #FF7043,
-  primary-gradient-start: #FF7043,
-  primary-gradient-end: #C6522E,
-
-  // Secondary Colors
+  primary: #B90808,
+  primary-light: #FEF0EC,
+  primary-dark: #180802,
   secondary: #6c757d,
-  secondary-light: #E9ECEF,
-  secondary-dark: #495057,
-  secondary-hover: #5A6268,
-
-  // Success Colors
   success: #28a745,
-  success-light: #E8F5E9,
-  success-dark: #1E7E34,
-  success-hover: #218838,
-
-  // Danger Colors
   danger: #EA5455,
-  danger-light: #FDECEC,
-  danger-dark: #b61616,
-  danger-hover: #C82333,
-
-  // Warning Colors
+  danger-hover: #b61616,
   warning: #ffc107,
-  warning-light: #FFF3CD,
-  warning-dark: #FFAB00,
-  warning-hover: #E0A800,
-
-  // Info Colors
   info: #17a2b8,
-  info-light: #D1ECF1,
-  info-dark: #117A8B,
-  info-hover: #138496,
-
-  // Light Colors
-  light: #fffdfc,
-  light-mid: #F1F3F5,
-  light-dark: #E9ECEF,
-
-  // Dark Colors
-  dark: #050100,
-  dark-mid: #232323,
-  dark-light: #282828,
-  dark-hover: #343A40,
-
-  // Neutral/Gray Colors
-  gray-100: #F8F9FA,
-  gray-200: #E9ECEF,
-  gray-300: #DEE2E6,
-  gray-400: #CED4DA,
-  gray-500: #ADB5BD,
-  gray-600: #6C757D,
-  gray-700: #495057,
-  gray-800: #343A40,
-  gray-900: #212529,
-
-  // Text Colors
-  text-primary: #050100,
-  text-secondary: #6C757D,
-  text-light: #A8AAAE,
-  text-label: #5A6A85,
-
-  // Background Colors
-  background-light: #F8F9FA,
-  background-dark: #343A40,
-  background-accent: #FEF0EC,
-
-  // Borders and Shadows
-  border: #DFE5EF,
-  border-dark: #7C8FAC,
-  card-border: #EBF1F6,
-  shadow: #A8AAAE,
-
-  // Utility Colors
+  light: #f8f9fa,
+  dark: #2A3546,
+  dark-mid: #A8AAAE,
   white: #ffffff,
-  black: #000000,
-  transparent: transparent,
-  overlay: rgba(0, 0, 0, 0.5)
+  label: #5A6A85,
+  shadow: #A8AAAE,
+  card-border: #EBF1F6,
+  border: #DFE5EF,
+  border-dark: #7C8FAC
 );
-
 
 //@include define-colors($colors);
 

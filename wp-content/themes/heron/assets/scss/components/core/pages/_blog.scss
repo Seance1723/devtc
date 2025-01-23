@@ -1,0 +1,181 @@
+/***Blog-Intro Image***/
+
+.blog-intro {
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+    background: linear-gradient(180deg, rgba(5, 1, 0, 0), rgb(5, 1, 0)), url('http://localhost/devtc/wp-content/uploads/2025/01/motion-speed-effect-with-city-night.png') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+
+    .content-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .blog-heading {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 100px;
+
+            h1 {
+                margin: 0;
+                font-size: 36px;
+                font-weight: bold;
+                color: white;
+            }
+
+            p {
+                margin-top: 10px;
+                font-size: 16px;
+                color: #ffffff;
+            }
+        }
+
+        .blog-path {
+            display: flex;
+            align-items: center;
+            margin-right: 100px;
+
+            p {
+                margin: 0;
+                font-size: 16px;
+                color: #ffffff;
+            }
+
+            span {
+                color: #F16539;
+            }
+        }
+    }
+}
+
+/***Blog-card***/
+
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(2, 700px); // Increase each column to 700px wide
+    gap: 30px; // Space between cards
+    max-width: 1200px; // Container width to allow for the increased card width
+    margin: 0 auto; // Center align
+    padding: 30px;
+    margin-left: 100px;
+    margin-right: 100px; // Adjusted right margin for more space
+}
+
+.blog-card {
+    position: relative; // Enables absolute positioning for the blog-tag
+    background-color: #fff; // White card background
+    border-radius: 8px;
+    overflow: hidden; // Prevents content overflow
+    text-align: left;
+    margin-bottom: 10px; // Space between .blog-card elements
+    height: 450px; // Fixed height for all blog cards
+
+    img {
+        width: 100%; // Full width for responsive images
+        height: 200px; // Fixed height for images
+        display: block;
+        object-fit: cover; // Ensure image covers the area
+        border-radius: 8px 8px 0 0; // Rounded corners at the top only
+        margin-bottom: 20px;
+    }
+
+    .blog-tag {
+        position: absolute;
+        top: 10px; // Top of the image
+        left: 10px; // Left corner of the image
+        background-color: rgba(0, 0, 0, 0.7); // Semi-transparent black
+        color: #fff; // White text
+        font-size: 14px;
+        font-weight: bold;
+        padding: 5px 10px;
+        border-radius: 4px; // Rounded corners
+        z-index: 10; // Keeps it above the image
+    }
+
+    .blog-content {
+        padding: 0px; // Padding around the content
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; // Space out the content vertically
+
+        .blog-meta-container {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .blog-title {
+            font-size: 21px;
+            color: #333;
+            margin: 0px 0px 10px;
+        }
+
+        .blog-description {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .read-more {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: bold;
+            color: #000000; // Link color
+            text-decoration: none;
+            border-bottom: 2px solid transparent; // Hover effect border
+            transition: border-color 0.3s;
+
+            &:hover {
+                color: #F16539; // Border color on hover
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.category {
+    margin-bottom: 16px;
+
+    h3 {
+        font-size: 1.5em; 
+        font-weight: bold; 
+        margin: 0; 
+        position: relative; 
+
+        &::after {
+            content: "";
+            display: block;
+            width: 50px; // Length of the underline
+            height: 2px; // Thickness of the underline
+            background-color: black; // Color of the underline
+            margin-top: 5px; // Space between the heading and underline
+            position: absolute;
+            left: 0; // Align to the left of the heading
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

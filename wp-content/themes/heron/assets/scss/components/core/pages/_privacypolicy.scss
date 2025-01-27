@@ -1,0 +1,112 @@
+// Variables for consistent theming
+$font-stack: "Arial", sans-serif;
+
+// General body styling
+body {
+  font-family: $font-stack;
+  color: #333;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+// Entry content styling
+.entry-content {
+  padding-right: 100px;
+  padding-left: 100px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+  ol.wp-block-list {
+    padding-top: 10px;
+
+    li {
+      margin-bottom: 1rem;
+      font-weight: bold;
+      color: #ff6900;
+
+      &::marker {
+        color: #333;  // Set your desired color for the numbers here
+      }
+
+      &:hover {
+        border-bottom: #ff6900;
+        cursor: pointer;
+      
+      }
+    }
+  }
+
+  p {
+    margin: 1rem 0;
+    line-height: 1.8;
+
+    a {
+      color: #F16539;
+      text-decoration: none;
+
+      &:hover {
+        color: #F16539;
+        
+      }
+    }
+  }
+}
+
+// Block group styling
+.wp-block-group {
+  margin: 2rem 0;
+
+  .wp-block-group__inner-container {
+    padding: 1rem;
+    background-color: #f4f4f4;
+    border-left: 5px solid #F16539;
+    border-radius: 5px;
+  }
+}
+
+// Columns layout
+.wp-block-columns {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+
+  .wp-block-column {
+    flex: 1;
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    ol.wp-block-list {
+      margin-top: 1rem;
+
+      li {
+        font-size: 1rem;
+        color: #333;
+
+        strong {
+          color: #F16539;
+        }
+      }
+    }
+  }
+}
+
+// Buttons (if any are added later)
+button {
+  background-color: #F16539;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+
+  &:hover {
+    background-color: #f1643963;
+    text-decoration: none;
+  }
+}
